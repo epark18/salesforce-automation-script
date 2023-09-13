@@ -85,7 +85,7 @@ salesforceOrderForm()
 salesforcePartnerOrderForm()
 {
 	echo -e "\e[44mRunning salesforcePartnerOrderForm.testcase\e[0m"
-    cd "$qaWebsites"
+	cd "$qaWebsites"
 
 	(source gradlew :salesforce:runPoshi -PposhiTestName="SalesforcePartnerOrderForm#CanGeneratePartnerOrderFormStandard")
 	cp "$testResults"SalesforcePartnerOrderForm_CanGeneratePartnerOrderFormStandard/screenshots/screenshot0.jpg "$screenshotPartnerOrderForm"
@@ -94,11 +94,11 @@ salesforcePartnerOrderForm()
 
 salesforcePositionActionForm() 
 {
-    echo -e "\e[44mRunning salesforcePositionActionForm.testcase\e[0m"
-    cd "$qaWebsites"
+	echo -e "\e[44mRunning salesforcePositionActionForm.testcase\e[0m"
+	cd "$qaWebsites"
 
     (source gradlew :salesforce:runPoshi -PposhiTestName="SalesforcePositionActionForm#CanGeneratePositionActionForm")
-	cp "$testResults"SalesforcePositionActionForm_CanGeneratePositionActionForm/screenshots/screenshot0.jpg "$screenshotPartnerOrderForm"
+	cp "$testResults"SalesforcePositionActionForm_CanGeneratePositionActionForm/screenshots/screenshot0.jpg "$screenshotPositionActionForm"
 	mv ""$screenshotPositionActionForm"/screenshot0.jpg" ""$screenshotPositionActionForm"/CanGeneratePositionActionForm.jpg"
 }
 
