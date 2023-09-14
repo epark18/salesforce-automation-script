@@ -8,14 +8,6 @@
 # Exceptions
 	set -e
 
-# Variables for Paths
-    qaWebsites="$HOME/${path_to_liferay_qa_websites_repo}"
-    testResults="$HOME/${path_to_liferay_qa_websites_repo}/salesforce/test-results/LocalFile."
-    screenshotDirectOrderForm="${path_to_script}/salesforce-automation-script/Salesforce_Screenshots/SalesforceOrderForm"
-    screenshotPartnerOrderForm="${path_to_script}/salesforce-automation-script/Salesforce_Screenshots/SalesforcePartnerOrderForm"
-    screenshotPositionActionForm="${path_to_script}/salesforce-automation-script/Salesforce_Screenshots/SalesforcePositionActionForm"
-
-
 #### Functions
 
 salesforce()
