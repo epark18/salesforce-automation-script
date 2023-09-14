@@ -8,15 +8,18 @@
 # Exceptions
 	set -e
 
+# Source Variables
+	source variable.sh
+
 #### Functions
 
 salesforce()
 {
-# Clear screenshots folders
+# Clear screenshots directory
 	echo -e "\e[44mDeleting old Salesforce Screenshots folder\e[0m"
 	rm -rf $cwd/salesforce_screenshots
 
-# Create new screenshots folders
+# Create new screenshots directory
 	mkdir -p Salesforce_Screenshots/SalesforceOrderForm Salesforce_Screenshots/SalesforcePartnerOrderForm Salesforce_Screenshots/SalesforcePositionActionForm
 
 # Run tests
@@ -30,6 +33,7 @@ salesforce()
 
 salesforceOrderForm() 
 {
+# Run tests
     echo -e "\e[44mRunning salesforceOrderForm.testcase\e[0m"
     cd "$qaWebsites"
 
@@ -76,6 +80,7 @@ salesforceOrderForm()
 
 salesforcePartnerOrderForm()
 {
+# Run tests
 	echo -e "\e[44mRunning salesforcePartnerOrderForm.testcase\e[0m"
 	cd "$qaWebsites"
 
@@ -86,6 +91,7 @@ salesforcePartnerOrderForm()
 
 salesforcePositionActionForm() 
 {
+# Run tests
 	echo -e "\e[44mRunning salesforcePositionActionForm.testcase\e[0m"
 	cd "$qaWebsites"
 
