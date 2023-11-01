@@ -14,8 +14,7 @@ git clone git@github.com:liferay/liferay-qa-websites-ee.git
 ```
 Note: These commands are for SSH. If you prefer HTTPS, please use the appropriate link.
 ## Setup
-1. Update the variable.sh file to match file locations. These variables are paths to specific directories and were created in an effort to reduce redundancy when writing the script.
-2. Since this is an ongoing project, users will be required to pull from both repositories regularly to be up-to-date on test coverage as they are submitted.
+1. Since this is an ongoing project, users will be required to pull from both repositories to be up-to-date on test coverage.
 
 salesforce-automation-script
 ```
@@ -26,10 +25,34 @@ liferay-qa-websites-ee
 git pull origin master
 ```
 ## Usage
-```bash
-#Run all tests
-bash setup.sh salesforce
 ```
-The script will create a separate folder to store screenshots for every unique .testcase file. It will then run all tests and copy and rename a screenshot of the Order Form PDF and move them to the newly created screenshots folders.
+#Run Single Test
+bash salesforce.sh testCase#testName
+
+#Example
+bash salesforce.sh SalesforceDirectOrderForm#CanGenerateDirectOrderForm
+```
+```
+#Run All Tests in a Testcase
+bash salesforce.sh testCase
+
+#Example
+bash salesforce.sh SalesforceDirectOrderForm
+```
+```
+#Run Multiple Tests
+bash salesforce.sh testCase#testName testCase#testName #testCase#testName
+
+#Example
+bash salesforce.sh SalesforceDirectOrderForm#CanGenerateDirectOrderForm SalesforceDirectOrderForm#CanGenerateDirectOrderFormWithSpecialTerms SalesforceQuote#CanGenerateQuote
+```
+```
+#Run Multiple Testcase Files
+bash salesforce.sh testCase testCase testCase
+
+#Example
+bash salesforce.sh SalesforceDirectOrderForm SalesforceQuote SalesforcePartnerOrderForm
+```
+The script will ask for the path to the user's salesforce directory from the liferay-qa-websites repository. It will then run tests and copy results to the same directory the script is located.
 ## Contributing
 Pull requests and suggestions for improvements are welcomed and encouraged!
