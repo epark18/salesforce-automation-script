@@ -11,7 +11,7 @@ for testcase in $@
 do 
     echo "Running testcase: $testcase"
     cd $salesforceDir
-    (gradle :salesforce:runPoshi -PposhiTestName="$testcase")
+    (../gradlew :salesforce:runPoshi -PposhiTestName="$testcase")
     echo "Testcase $testcase completed, copying test-result folder to current directory"
     cd ~/Desktop/salesforce-automation-script
     cp -r $salesforceDir/test-results/ .
