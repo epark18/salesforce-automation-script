@@ -3,6 +3,7 @@ This script is used to run tests and group screenshots relating Liferay Salesfor
 ## Requirements
 1. Operating System capable of running Bash.
 2. Access to this repository: [liferay-qa-websites-ee](https://github.com/liferay/liferay-qa-websites-ee)
+3. Google Chrome
 ## Installation
 1. Clone the salesforce-automation-script repository to your local machine.
 ```
@@ -24,7 +25,15 @@ liferay-qa-websites-ee
 ```
 git pull origin master
 ```
+2. The script path is set to *~/Desktop/salesforce-automation-script* by default. If saving in another location, please edit line 16 to user preferences. 
+3. Download the [Chromium Snapshot](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Linux_x64/972765/) (chrome-linux.zip).
+4. Unzip the Chromium Snapshot at any location.
+5. Create a poshi-ext.properties file in the salesforce directory of the liferay-qa-websites-ee repository. Add the line: 
+```
+browser.chrome.bin.file=/path/to/chromium/binary
+```
 ## Usage
+In salesforce-automation-script:
 ```
 #Run Single Test
 bash salesforce.sh testCase#testName
